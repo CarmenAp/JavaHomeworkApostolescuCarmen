@@ -21,7 +21,7 @@ import javax.swing.JTextField;
 
     public  JFrame(String calculator_OOP) {
     JFrame frame = new JFrame("Calculator OOP");   
-     //make sure the program exits when the frame closes
+     //make sure the program exits when the frame closes zzz
     // Size the frame.
     frame.pack(300,300);
     // Show it.
