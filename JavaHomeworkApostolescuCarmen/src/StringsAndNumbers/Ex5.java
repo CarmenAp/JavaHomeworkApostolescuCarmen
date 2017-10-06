@@ -17,5 +17,5 @@ public class Ex5 {
     String newStringEx3Homework = "Was it a car or a cat I saw?".substring(9,12);
     String neww = "Carmen Apostolescu".substring(0) ;
     String neww1= "Carmen Apostolescu".substring(7) ;
-//System.out.println(“My initials from full name are:” + neww + neww1);
+//System.out.println("My initials from full name are:" + neww + neww1);
 }
