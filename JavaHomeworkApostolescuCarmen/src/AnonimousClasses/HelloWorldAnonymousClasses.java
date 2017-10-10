@@ -40,7 +40,7 @@ HelloWorld englishGreeting = new EnglishGreeting();
 
 // create an anonimous class that greets in French language HelloWorld frenchGreeting;
 
- HelloWorld frenchGreeting = new HelloWorld() {
+class FrenchGreeting implements HelloWorld {
  
 String name = "tout le monde"; @Override
 public void greet() {
@@ -55,9 +55,9 @@ name = someone;
 System.out.println("Salut " + name); } ; 
  // end of anonimous class french Greeting = new HelloWorld() {
  } ;
-
+HelloWorld frenchGreeting = new FrenchGreeting();
 // create an anonimous class for Spanish language
-HelloWorld spanishGreeting = new HelloWorld() { 
+class SpanishGreeting implements HelloWorld { 
 String name = "mundo"; @Override
 public void greet() {
 
@@ -72,6 +72,8 @@ System.out.println("Hola, " + name);
 }
  // end of anonymous class 
 };
+HelloWorld spanishGreeting = new SpanishGreeting();
+
 englishGreeting.greet(); 
 frenchGreeting.greetSomeone("Fred");
 spanishGreeting.greet();
