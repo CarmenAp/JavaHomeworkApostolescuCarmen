@@ -10,33 +10,35 @@ package CalculatorOOP;
  * @author qqq
  */
 public class User {
+    
+        private static Calculator calculator = new Calculator();
+
+    /**
+     * Get the value of calculator
+     *
+     * @return the value of calculator
+     */
+    public static Calculator getCalculator() {
+        return calculator;
+    }
+
+    /**
+     * Set the value of calculator
+     *
+     * @param calculator new value of calculator
+     */
+    public static void setCalculator(Calculator calculator) {
+        User.calculator = calculator;
+    }
+
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Computer displays 0 value by default;
-        System.out.println("0");
-    }
 
-    private Calculator calculatorOOP;
+        calculator.pushButtons(); 
 
-    /**
-     * Get the value of calculatorOOP
-     *
-     * @return the value of calculatorOOP
-     */
-    public Calculator getCalculatorOOP() {
-        return calculatorOOP;
-    }
-
-    /**
-     * Set the value of calculatorOOP
-     *
-     * @param calculatorOOP new value of calculatorOOP
-     */
-    public void setCalculatorOOP(Calculator calculatorOOP) {
-        this.calculatorOOP = calculatorOOP;
     }
     
 }

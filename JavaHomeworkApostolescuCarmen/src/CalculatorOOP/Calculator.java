@@ -5,308 +5,52 @@
  */
 package CalculatorOOP;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author qqq
  */
 public class Calculator {
-    
-    private Ecran screen = new Ecran("");   
-    
-    private Button button0 = new Button("0");
-    private Button button1 = new Button("1");
-    private Button button2 = new Button("2");
-    private Button button3 = new Button("3");
-    
-    private Button button4 = new Button("4");
-    
-    private Button button5 = new Button("5");
-    
-    private Button button6 = new Button("6");
-    
-    private Button button7 = new Button("7");
-    
-    private Button button8 = new Button("8");
 
-    private Button button9 = new Button("9");
-    
-    private Button buttonPlus = new Button("+");
-    
-    private Button buttonMinus = new Button("-");
-    
-    private Button buttonOr = new Button("*");
-    
-    private Button buttonDivide = new Button("/");
-    
-    private Button buttonEql = new Button("=");
-    private Button buttonClear = new Button("C");
-    
-    private Processor procesor = new Processor();
+    private Screen ecran = new Screen();
+    private PushButton button0 = new PushButton('0');
+    private PushButton button1 = new PushButton('1');
+    private PushButton button2 = new PushButton('2');
+
+    private Processor processor = new Processor();
+
     /**
-     * Get the value of buttonEql
+     * Get the value of processor
      *
-     * @return the value of buttonEql
+     * @return the value of processor
      */
-    public Button getButtonEql() {
-        return buttonEql;
+    public Processor getProcessor() {
+        return processor;
     }
 
     /**
-     * Set the value of buttonEql
+     * Set the value of processor
      *
-     * @param buttonEql new value of buttonEql
+     * @param processor new value of processor
      */
-    public void setButtonEql(Button buttonEql) {
-        this.buttonEql = buttonEql;
+    public void setProcessor(Processor processor) {
+        this.processor = processor;
     }
-
-    
-   
-
-    /**
-     * Get the value of procesor
-     *
-     * @return the value of procesor
-     */
-    public Processor getProcesor() {
-        return procesor;
-    }
-
-    /**
-     * Set the value of procesor
-     *
-     * @param procesor new value of procesor
-     */
-    public void setProcesor(Processor procesor) {
-        this.procesor = procesor;
-    }
-
-    /**
-     * Get the value of buttonClear
-     *
-     * @return the value of buttonClear
-     */
-    public Button getButtonClear() {
-        return buttonClear;
-    }
-
-    /**
-     * Set the value of buttonClear
-     *
-     * @param buttonClear new value of buttonClear
-     */
-    public void setButtonClear(Button buttonClear) {
-        this.buttonClear = buttonClear;
-    }
-
-    /**
-     * Get the value of buttonDivide
-     *
-     * @return the value of buttonDivide
-     */
-    public Button getButtonDivide() {
-        return buttonDivide;
-    }
-
-    /**
-     * Set the value of buttonDivide
-     *
-     * @param buttonDivide new value of buttonDivide
-     */
-    public void setButtonDivide(Button buttonDivide) {
-        this.buttonDivide = buttonDivide;
-    }
-
-    /**
-     * Get the value of buttonOr
-     *
-     * @return the value of buttonOr
-     */
-    public Button getButtonOr() {
-        return buttonOr;
-    }
-
-    /**
-     * Set the value of buttonOr
-     *
-     * @param buttonOr new value of buttonOr
-     */
-    public void setButtonOr(Button buttonOr) {
-        this.buttonOr = buttonOr;
-    }
-
-    /**
-     * Get the value of buttonMinus
-     *
-     * @return the value of buttonMinus
-     */
-    public Button getButtonMinus() {
-        return buttonMinus;
-    }
-
-    /**
-     * Set the value of buttonMinus
-     *
-     * @param buttonMinus new value of buttonMinus
-     */
-    public void setButtonMinus(Button buttonMinus) {
-        this.buttonMinus = buttonMinus;
-    }
-
-
-    /**
-     * Get the value of buttonPlus
-     *
-     * @return the value of buttonPlus
-     */
-    public Button getButtonPlus() {
-        return buttonPlus;
-    }
-
-    /**
-     * Set the value of buttonPlus
-     *
-     * @param buttonPlus new value of buttonPlus
-     */
-    public void setButtonPlus(Button buttonPlus) {
-        this.buttonPlus = buttonPlus;
-    }
-
-    /**
-     * Get the value of button9
-     *
-     * @return the value of button9
-     */
-    public Button getButton9() {
-        return button9;
-    }
-
-    /**
-     * Set the value of button9
-     *
-     * @param button9 new value of button9
-     */
-    public void setButton9(Button button9) {
-        this.button9 = button9;
-    }
-
-    /**
-     * Get the value of button8
-     *
-     * @return the value of button8
-     */
-    public Button getButton8() {
-        return button8;
-    }
-
-    /**
-     * Set the value of button8
-     *
-     * @param button8 new value of button8
-     */
-    public void setButton8(Button button8) {
-        this.button8 = button8;
-    }
-
-    /**
-     * Get the value of button7
-     *
-     * @return the value of button7
-     */
-    public Button getButton7() {
-        return button7;
-    }
-
-    /**
-     * Set the value of button7
-     *
-     * @param button7 new value of button7
-     */
-    public void setButton7(Button button7) {
-        this.button7 = button7;
-    }
-
-    
-    /**
-     * Get the value of button6
-     *
-     * @return the value of button6
-     */
-    public Button getButton6() {
-        return button6;
-    }
-
-    /**
-     * Set the value of button6
-     *
-     * @param button6 new value of button6
-     */
-    public void setButton6(Button button6) {
-        this.button6 = button6;
-    }
-
-    /**
-     * Get the value of button5
-     *
-     * @return the value of button5
-     */
-    public Button getButton5() {
-        return button5;
-    }
-
-    /**
-     * Set the value of button5
-     *
-     * @param button5 new value of button5
-     */
-    public void setButton5(Button button5) {
-        this.button5 = button5;
-    }
-
-    /**
-     * Get the value of button4
-     *
-     * @return the value of button4
-     */
-    public Button getButton4() {
-        return button4;
-    }
-
-    /**
-     * Set the value of button4
-     *
-     * @param button4 new value of button4
-     */
-    public void setButton4(Button button4) {
-        this.button4 = button4;
-    }
-
-    /**
-     * Get the value of button3
-     *
-     * @return the value of button3
-     */
-    public Button getButton3() {
-        return button3;
-    }
-
-    /**
-     * Set the value of button3
-     *
-     * @param button3 new value of button3
-     */
-    public void setButton3(Button button3) {
-        this.button3 = button3;
-    }
-
 
     /**
      * Get the value of button2
      *
      * @return the value of button2
      */
-    public Button getButton2() {
-        return button2;
+    public PushButton getButton2() {
+        return null;
+        
     }
 
     /**
@@ -314,7 +58,7 @@ public class Calculator {
      *
      * @param button2 new value of button2
      */
-    public void setButton2(Button button2) {
+    public void setButton2(PushButton button2) {
         this.button2 = button2;
     }
 
@@ -323,8 +67,9 @@ public class Calculator {
      *
      * @return the value of button1
      */
-    public Button getButton1() {
-        return button1;
+    public PushButton getButton1() {
+        return null;
+       
     }
 
     /**
@@ -332,7 +77,7 @@ public class Calculator {
      *
      * @param button1 new value of button1
      */
-    public void setButton1(Button button1) {
+    public void setButton1(PushButton button1) {
         this.button1 = button1;
     }
 
@@ -341,8 +86,9 @@ public class Calculator {
      *
      * @return the value of button0
      */
-    public Button getButton0() {
-        return button0;
+    public PushButton getButton0() {
+        
+        return null;
     }
 
     /**
@@ -350,27 +96,92 @@ public class Calculator {
      *
      * @param button0 new value of button0
      */
-    public void setButton0(Button button0) {
+    public void setButton0(PushButton button0) {
         this.button0 = button0;
     }
 
-
     /**
-     * Get the value of screen
+     * Get the value of ecran
      *
-     * @return the value of screen
+     * @return the value of ecran
      */
-    public Ecran getScreen() {
-        return screen;
+    public Screen getEcran() {
+        return ecran;
     }
 
     /**
-     * Set the value of screen
+     * Set the value of ecran
      *
-     * @param screen new value of screen
+     * @param ecran new value of ecran
      */
-    public void setScreen(Ecran screen) {
-        this.screen = screen;
+    public void setEcran(Screen ecran) {
+        this.ecran = ecran;
     }
-
+    
+    
+    
+    /**
+     * Pushing the button of calculator
+     */
+    public void pushButtons() {
+       
+       
+        System.out.println("Please introduce first number");
+   
+            String input ;
+            int operand1 = 0;
+try{
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    input = bufferedReader.readLine();
+    operand1 = Integer.parseInt(input);
+        
+} catch (NumberFormatException ex) {
+    System.out.println("Not a number!");
+    return;
+}       catch (IOException ex) {
+            Logger.getLogger(Calculator.class.getName()).log(Level.SEVERE, null, ex);
+        }
+  
+        processor.setOperand1(operand1);
+          
+        System.out.println("Please introduce operation");
+        Scanner scanner2 = new Scanner(System.in);
+        String stringOperation = scanner2.nextLine();
+        char operation = stringOperation.charAt(0);
+        processor.setOperator(operation);
+      
+        
+        System.out.println("Please introduce second number");
+     
+         String input1 ;
+            int operand2 = 0;
+try{
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+    input1 = bufferedReader.readLine();
+    operand2 = Integer.parseInt(input1);
+        
+} catch (NumberFormatException ex) {
+    System.out.println("Not a number!");
+    return;
 }
+catch (IOException e) {            
+            Logger.getLogger(Calculator.class.getName()).log(Level.SEVERE, null, e);
+        }
+        
+        processor.setOperand2(operand2);
+       
+        
+        System.out.println("Result:");
+        
+        processor.compute();   
+        
+       ecran.setEcran(Integer.toString(processor.getResult()));
+        
+    }
+
+      public static void closeCalculator(String s) {
+        if (s.matches(".*[a-z].*")) {
+            System.out.println("Invalid action!You can use only numbers. Take it from the beginning.");
+            
+        }
+    } }
